@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câu lạc bộ 12A4</title>
+    <link rel="shortcut icon" href="../Anh/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../format/style.css" />
+    <!--  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+  </head>
+  <body>
+    <div class="intro">
+      <div class="container" id="header">
+        <img
+          src="../Anh/LogoLop.png"
+          alt="Logo lớp"
+          width="50px"
+          height="50px"
+        />
+        <h1>Lớp 12A4</h1>
+        <nav class="navbar">
+          <div
+            class="nav-item "
+            onclick="location.href='../index.html'"
+            id="nav-trangchu"
+          >
+            Trang chủ
+          </div>
+          <div
+            class="nav-item active"
+            onclick="location.href='./lichtrinh.html'"
+            id="nav-lichtrinh"
+          >
+            Lịch trình
+          </div>
+          <div
+            class="nav-item"
+            onclick="location.href='../sideweb-hoctap/hoctap.html'"
+            id="nav-hoctap"
+          >
+            Học tập
+          </div>
+          <div
+            class="nav-item"
+            onclick="location.href='../sideweb-danhsach/danhsach.html'"
+            id="nav-danhsach"
+          >
+            Danh sách
+          </div>
+          <div
+            class="nav-item"
+            onclick="location.href='../sideweb-luubut/luubut.html'"
+            id="nav-luubut"
+          >
+            Lưu bút
+          </div>
+          <div
+            class="nav-item"
+            onclick="location.href='../sideweb-hotro/hotro.html'"
+            id="nav-hotro"
+          >
+            Hỗ trợ
+          </div>
+        </nav>
+      </div>
+      <div class="spacer"></div>
+      </div>
+    </div>
+    <div class="content">
+        <br>
+        <h1>LỊCH TRÌNH LỚP HỌC</h1>
+        <br />
+        <hr style="width: 15vw;"/>
+        <br />
+        <div class="container3">
+          <h2>Thời khóa biểu</h2>
+          <br />
+         <img id="displayImage" style="border: 2px solid #1c2eb5" src="../Anh/TKB_Light_Mode.jpg" alt="TKB Nền Sáng" />
+
+         <br />
+         <div class="button-container">
+            <button onclick="toggleImage()">Chuyển đổi Thời khóa biểu</button>
+            <button onclick="downloadImage()">Tải Thời khóa biểu</button>
+          </div>
+          <br>
+        </div>
+        <br />
+        <div class="container3">
+            <h2>Mốc thời gian quan trọng</h2>
+            <br />
+           <img style="height: 100vh;" src="../Anh/MocThoiGian.jpg" alt="Mốc thời gian"  />
+            
+           <div class="countdown">
+            <div class="container4">
+              <span>Thời gian đếm ngược đến </span>
+              <select id="dateSelect" onchange="updateCountdown()">
+                <option value="2025-03-30T00:00:00">Kỳ thi ĐGNL Đợt 1 (ĐHQGTP Hồ Chí Minh)</option>
+                <option value="2025-06-01T00:00:00">Kỳ thi ĐGNL Đợt 2 (ĐHQGTP Hồ Chí Minh)</option>
+                <option value="2025-03-15T00:00:00">Kỳ thi ĐGNL Đợt 1 (ĐHQGTP Hà Nội)</option>
+                <option value="2025-03-29T00:00:00">Kỳ thi ĐGNL Đợt 2 (ĐHQGTP Hà Nội)</option>
+                <option value="2025-04-12T00:00:00">Kỳ thi ĐGNL Đợt 3 (ĐHQGTP Hà Nội)</option>
+                <option value="2025-04-19T00:00:00">Kỳ thi ĐGNL Đợt 4 (ĐHQGTP Hà Nội)</option>
+                <option value="2025-05-10T00:00:00">Kỳ thi ĐGNL Đợt 5 (ĐHQGTP Hà Nội)</option>
+                <option value="2025-05-17T00:00:00">Kỳ thi ĐGNL Đợt 6 (ĐHQGTP Hà Nội)</option>
+                <option value="2025-04-26T00:00:00">Kỳ thi ĐGTD Đợt 3 (ĐH Bách Khoa Hà Nội)</option>
+                <option value="2025-05-17T00:00:00">Kỳ thi ĐGNL (ĐH Sư Phạm Hà Nội)</option>
+                <option value="2025-05-31T00:00:00">Kết thúc năm học 2024-2025</option>
+                <option value="2025-06-26T00:00:00">Kỳ thi tốt nghiệp THPT Quốc gia 2025</option>
+              </select>
+            </div>
+            
+            <div class="countdown-container">
+              <div class="timer-circle" id="days"></div>
+              <div class="timer-circle" id="hours"></div>
+              <div class="timer-circle" id="minutes"></div>
+              <div class="timer-circle" id="seconds"></div>
+            </div>
+          </div>
+          
+          
+              <br>
+          </div>
+          
+      </div>
+      <br>
+      
+    <script>
+        let currentImage = "../Anh/TKB_Light_Mode.jpg";
+        
+        function toggleImage() {
+          const imageElement = document.getElementById("displayImage");
+          if (currentImage === "../Anh/TKB_Light_Mode.jpg") {
+            currentImage = "../Anh/TKB_Dark_Mode.jpg";
+            imageElement.src = currentImage;
+            imageElement.alt = "TKB Nền Tối";
+          } else {
+            currentImage = "../Anh/TKB_Light_Mode.jpg";
+            imageElement.src = currentImage;
+            imageElement.alt = "TKB Nền Sáng";
+          }
+        }
+        
+        function downloadImage() {
+          const link = document.createElement("a");
+          link.href = currentImage;
+          link.download = currentImage.split("/").pop(); 
+          link.click();
+        }
+        
+        let interval; 
+
+      function updateCountdown() {
+        clearInterval(interval); 
+        const selectedDate = document.getElementById("dateSelect").value;
+        countdown(selectedDate);
+      }
+
+      function countdown(targetDate) {
+        const targetTime = new Date(targetDate).getTime();
+        const daysElement = document.getElementById("days");
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+
+        interval = setInterval(() => {
+          const now = new Date().getTime();
+          const distance = targetTime - now;
+
+          if (distance <= 0) {
+            clearInterval(interval);
+            daysElement.innerHTML = "00 ngày";
+            hoursElement.innerHTML = "00 giờ";
+            minutesElement.innerHTML = "00 phút";
+            secondsElement.innerHTML = "00 giây";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          daysElement.innerHTML = `${days} ngày`;
+          hoursElement.innerHTML = `${hours} giờ`;
+          minutesElement.innerHTML = `${minutes} phút`;
+          secondsElement.innerHTML = `${seconds} giây`;
+        }, 1000);
+      }
+
+      window.onload = function () {
+        updateCountdown(); 
+      };
+    </script>
+  </body>
+  <footer>
+    <a href="https://docs.google.com/document/d/1LdFnw9vJxWTEiJb3DY6K-XTuoo7PUl8pfyOR8dWllyw/edit?usp=sharing"  style="margin-left: 30vw" target="_blank">© Tập thể lớp 12A4 niên khóa 2024-2025, trường THPT Đầm Dơi</a>
+    <br>
+    <span>Facebook lớp: </span>
+    <a
+      href="https://www.facebook.com/profile.php?id=61564868475784"
+      target="_blank"
+      >Gia đình sợ rắn 12A4</a
+    >
+    <br />
+    <span>Website trường THPT Đầm Dơi: </span>
+    <a href="https://thpt-damdoi-camau.edu.vn/" target="_blank">Tại đây</a>
+    <br />
+    <span>Đội ngũ thực hiện web: Nhóm 7 viên ngọc Rồng - </span>
+    <a href="https://docs.google.com/document/d/1PkB45jJSOKLAEIqL77GFCL0NyRHl_v3WysopyqoioXE/edit?usp=sharing" target="_blank">Tìm hiểu thêm</a>
+    <br />
+  </footer>
+</html>
